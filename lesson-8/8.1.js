@@ -16,8 +16,13 @@ app
         console.log(req.url);
         console.log(req.query);
 
-        res.send('Hello World!'); // res.send로 서버에서 클라이언트의 응답 발행
+        res.send('<h1>HOME</h1>Hello World!'); // res.send로 서버에서 클라이언트의 응답 발행
+    })
+    .get('/about', (req, res) => {
+        console.log(req.rul);
+        console.log(req.query);
+        res.send('<h1>ABOUT</h1>About me!');
     })
     .listen(port, () => { // 3000번 포트로 애플리케이션 셋업
-        console.log(`The Express server is listening on port: ${port}`);
+        console.log(`Express at http://localhost:${port}`);
     });
